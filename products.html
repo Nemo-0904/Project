@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Robotic Co.</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <script src="https://js.stripe.com/v3/"></script>
+    <header>
+      <nav class="navbar">
+        <div class="logo">Robotic Co.</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Categories</a>
+            <ul class="dropdown-content">
+              <li><a href="#">AI Modules</a></li>
+              <li><a href="#">Educational Kits</a></li>
+              <li><a href="#">Industrial Robots</a></li>
+              <li><a href="#">Autonomous Robots</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="#" id="show-cart"
+              >Show Cart<span id="cart-count">(0)</span>
+            </a>
+          </li>
+          <li><a href="login.html" class="btn login">Login</a></li>
+          <li><a href="signup.html" class="btn signup">Sign Up</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="masonry-products">
+      <h2>Our Robots</h2>
+      <div class="masonry-grid">
+        <div class="masonry-item">
+          <img src="images/robot1.jpg" alt="Explorer Rover" />
+          <h3>Explorer Rover</h3>
+          <p>For rough terrain and GPS navigation.</p>
+          <span class="price">₹12000</span>
+          <button data-product-id="prod_explorer_rover">Add to Cart</button>
+        </div>
+
+        <div class="masonry-item">
+          <img src="images/robot2.jpg" alt="Mini Delivery Bot" />
+          <h3>Mini Delivery Bot</h3>
+          <p>Indoor autonomous robot with object detection.</p>
+          <span class="price">₹4000</span>
+          <button data-product-id="prod_mini_delivery_bot">Add to Cart</button>
+        </div>
+
+        <div class="masonry-item">
+          <img src="images/robot3.jpg" alt="Line Follower Kit" />
+          <h3>Line Follower Kit</h3>
+          <p>
+            DIY educational robot kit. Perfect for beginners in electronics and
+            robotics. Easy to assemble, with IR sensors and Arduino control
+            system support.
+          </p>
+          <span class="price">₹30,000</span>
+
+          <button data-product-id="prod_line_follower_kit_1">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="masonry-item">
+          <img src="images/robot3.jpg" alt="Line Follower Kit 2" />
+          <h3>Line Follower Kit (Advanced)</h3>
+          <p>
+            DIY educational robot kit. Perfect for beginners in electronics and
+            robotics. Easy to assemble, with IR sensors and Arduino control
+            system support.
+          </p>
+          <span class="price">₹344,000</span>
+          <button data-product-id="prod_line_follower_kit_2">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="masonry-item">
+          <img src="images/robot2.jpg" alt="Mini Delivery Bot 2" />
+          <h3>Mini Delivery Bot (Pro)</h3>
+          <p>Indoor autonomous robot with object detection.</p>
+          <span class="price">₹45,000</span>
+          <button data-product-id="prod_mini_delivery_bot_2">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="masonry-item">
+          <img src="images/robot1.jpg" alt="Explorer Rover 2" />
+          <h3>Explorer Rover (Pro)</h3>
+          <p>For rough terrain and GPS navigation.</p>
+          <span class="price">₹45,000</span>
+          <button data-product-id="prod_explorer_rover_2">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="cart-modal" class="cart-modal">
+      <div class="cart-content">
+        <h2>Your Cart</h2>
+
+        <ul id="cart-items"></ul>
+
+        <div class="cart-footer">
+          <strong>Total: ₹<span id="cart-total">0</span></strong>
+          <button id="buy-now-btn">Buy Now</button>
+        </div>
+
+        <button class="close-cart-btn" onclick="closeCart()">Close</button>
+      </div>
+    </div>
+
+    <footer id="contact" class="contact">
+      <p>Connect with us:</p>
+      <div class="social-buttons">
+        <a
+          href="mailto:support@Roboticco.com"
+          target="_blank"
+          class="social-btn email"
+          title="Email"
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a
+          href="https://linkedin.com/company/Roboticco"
+          target="_blank"
+          class="social-btn linkedin"
+          title="LinkedIn"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a
+          href="https://github.com/Roboticco"
+          target="_blank"
+          class="social-btn github"
+          title="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://instagram.com/Roboticco"
+          target="_blank"
+          class="social-btn insta"
+          title="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2025 Robotic Co. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

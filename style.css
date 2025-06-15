@@ -1,0 +1,634 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #1f2323;
+    padding: 1rem 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1e1e2f;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    top: 100%;
+    left: 0;
+    border-radius: 6px;
+    padding: 0.5rem 0;
+}
+
+.dropdown-content li {
+    display: block;
+}
+
+.dropdown-content li a {
+    color: white;
+    padding: 10px 16px;
+    display: block;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.dropdown-content li a:hover {
+    background-color: #93cddc;
+    color: #7979c2;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #0eb2ed;
+}
+
+.btn.login {
+    border: 1px solid #0eb2ed;
+    padding: 6px 12px;
+    border-radius: 5px;
+    background: transparent;
+}
+
+.btn.signup {
+    background: #0eb2ed;
+    padding: 6px 12px;
+    border-radius: 5px;
+    color: #0d3741 !important;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, #00c6ff, #0b8ec6);
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    background: #fff;
+    color: #0072ff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-btn:hover {
+    background: #0eb2ed;
+    color: #fff;
+}
+
+
+.about-us-section {
+    padding: 3rem 2rem;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.about-text {
+    flex: 1 1 45%;
+}
+
+.about-image {
+    flex: 1 1 45%;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.blog-section h2 {
+    text-align: center;
+    color: #0072ff;
+    margin-bottom: 2rem;
+}
+.blog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.blog-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    width: 300px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.blog-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+.blog-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.blog-card h3 {
+    font-size: 1.2rem;
+    color: #1e1e2f;
+    margin-bottom: 0.6rem;
+}
+
+.blog-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1f1f1a;
+    transition: color 0.2s;
+}
+
+.read-more:hover {
+    color: #0d6b74;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.service-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    width: 280px;
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card img {
+    height: 60px;
+    float: left;
+    margin-right: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.2rem;
+    color: #1e1e2f;
+    margin-bottom: 0.5rem;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: #555;
+    clear: both;
+}
+.info-section {
+    padding: 2rem;
+    background: #fff;
+    margin: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1e1e2f;
+    color: #ccc;
+}
+
+.footer-contact {
+    background-color: #1e1e2f;
+    color: #ccc;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.footer-contact p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    background: #71d2df;
+    color: #1e1e2f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+.social-btn:hover {
+    background: #11616d;
+    color: white;
+}
+
+.footer-copy {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+
+.masonry-products {
+    padding: 2rem;
+    background: #f0f4f8;
+}
+
+.masonry-products h2 {
+    text-align: center;
+    color: #0072ff;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.masonry-grid {
+    column-count: 3;
+    column-gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+@media (max-width: 900px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .masonry-grid {
+        column-count: 1;
+    }
+}
+
+.masonry-item {
+    position: relative;
+    background: #fff;
+    display: inline-block;
+    margin: 0 0 1.5rem;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    padding: 1rem;
+    break-inside: avoid;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.masonry-item img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.masonry-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.masonry-item p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.masonry-item span {
+    color: #01031a;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.masonry-item button {
+    padding: 0.5rem 1rem;
+    background-color: #1bb1bf;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.masonry-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.category-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #1bb1bf;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.form-container {
+    max-width: 400px;
+    margin: 5rem auto;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 1rem;
+    color: #0072ff;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-container input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-container button {
+    padding: 0.8rem;
+    background-color: #1bb1bf;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.form-container button:hover {
+    background-color: #0ecaec;
+}
+
+.form-container p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}/* Basic styling for the form elements for context */
+
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Include padding in width */
+}
+
+/* Password Toggle Styling */
+.password-container {
+    position: relative;
+    /* Essential for positioning the toggle icon */
+    margin-bottom: 15px;
+    /* Adjust as needed */
+}
+
+.password-container input[type="password"],
+.password-container input[type="text"] {
+    /* Target both types for styling */
+    padding-right: 40px;
+    /* Make space for the icon */
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10; }
+
+.password-toggle:hover {
+    color: #333;
+    /* Darker color on hover */
+}
+
+/* You already have .sr-only in your style.css */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    border: 0;
+    white-space: nowrap;
+}
+
+
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    /* Older browsers */
+                    clip-path: inset(50%);
+                    /* Modern browsers */
+                    border: 0;
+                    white-space: nowrap;
+                    /* Keep the text on a single line */         }
+@media screen and (max-width: 480px) {
+.form-container {
+ margin: 2rem 1rem;
+           padding: 1.5rem;
+      }
+             }
+
+                         .cart-modal {
+                             display: none;
+                             position: fixed;
+                             z-index: 999;
+                             left: 0;
+                             top: 0;
+                             width: 100%;
+                             height: 100%;
+                             background: rgba(4, 54, 58, 0.6);
+                         }
+            
+                         .cart-content {
+                             background: #fff;
+                             width: 90%;
+                             max-width: 400px;
+                             margin: 5% auto;
+                             padding: 2rem;
+                             border-radius: 8px;
+                             text-align: left;
+                         }
+            
+                         .cart-content h2 {
+                             margin-bottom: 1rem;
+                         }
+            
+                         #cart-items li {
+                             display: flex;
+                             justify-content: space-between;
+                             margin-bottom: 1rem;
+                         }
+            
+                         #cart-items button {
+                             background: rgb(4, 149, 197);
+                             color: #fff;
+                             border: none;
+                             padding: 0.2rem 0.5rem;
+                             border-radius: 4px;
+                             cursor: pointer;
+                         }
+
+                            .cart-modal {
+                            transition: opacity 0.3s ease;
+                             }
+                                                         .cart-footer {
+                                                             margin-top: 1rem;
+                                                             text-align: center;
+                                                         }
+                            
+                #buy-now-btn {
+                                                             padding: 0.7rem 1.5rem;
+                                                             background-color: #1bb1bf;
+                                                             color: white;
+                                                             border: none;
+                                                             border-radius: 5px;
+                                                             cursor: pointer;
+                                                             font-size: 1rem;
+                                                             margin-top: 0.5rem;
+                                                         }
+                            
+                                                         #buy-now-btn:hover {
+                                                             background-color: #87c1cf;
+                                                         }
+/* In your style.css file */
+.close-cart-btn {
+    background-color: #abe0ed;
+    /* Red background, common for close buttons */
+    color: white;
+    /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+    /* Adjust spacing as needed */
+    transition: background-color 0.3s ease;
+    /* You might want to position this explicitly if it's not inline with other buttons */
+    display: block;
+    /* Makes it take full width */
+    width: 100%;
+    /* Full width within its container */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+}
+
+.close-cart-btn:hover {
+    background-color: #9ad1d9;
+    /* Darker red on hover */ }
+
