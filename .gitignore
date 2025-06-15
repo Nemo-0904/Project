@@ -1,0 +1,31 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Secrets
+.env
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+Icon?
+
+# VSCode settings (optional, if you use VSCode)
+.vscode/
+
+# Build artifacts (in case you use a build tool or bundler)
+build/
+dist/
+
+# Misc
+text.txt
