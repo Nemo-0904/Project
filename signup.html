@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Robotic Co.</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Sign Up</h2>
+      <form id="signup-form">
+        <input
+          type="text"
+          name="name"
+          placeholder="Full Name"
+          autocomplete="name"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          autocomplete="email"
+          required
+        />
+        <label for="signup-password" class="sr-only">Password</label>
+        <div class="password-container">
+          <input
+            type="password"
+            id="signup-password"
+            name="password"
+            placeholder="Password"
+            autocomplete="new-password"
+            required
+          />
+          <span class="password-toggle" id="signup-password-toggle">
+            <i class="fas fa-eye"></i>
+          </span>
+        </div>
+        <button type="submit">Create Account</button>
+        <p>Already have an account? <a href="login.html">Log in</a></p>
+      </form>
+    </div>
+
+    <!-- Password toggle logic -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggle = document.getElementById("signup-password-toggle");
+        const passwordInput = document.getElementById("signup-password");
+
+        if (toggle && passwordInput) {
+          toggle.addEventListener("click", () => {
+            const type =
+              passwordInput.getAttribute("type") === "password"
+                ? "text"
+                : "password";
+            passwordInput.setAttribute("type", type);
+            toggle.querySelector("i").classList.toggle("fa-eye");
+            toggle.querySelector("i").classList.toggle("fa-eye-slash");
+          });
+        }
+
+        // Handle form submission via fetch
+        const form = document.getElementById("signup-form");
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const name = form.name.value;
+          const email = form.email.value;
+          const password = form.password.value;
+
+          try {
+            const response = await fetch(
+              "http://localhost:5000/api/auth/signup",
+              {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, email, password }),
+              }
+            );
+
+            const data = await response.json();
+
+            if (response.ok) {
+              alert("Signup successful! Redirecting to login...");
+              window.location.href = "login.html";
+            } else {
+              alert("Signup failed: " + data.message);
+            }
+          } catch (error) {
+            console.error("Signup error:", error);
+            alert("Something went wrong. Please try again.");
+          }
+        });
+      });
+    </script>
+
+    <script src="main.js"></script>
+  </body>
+</html>

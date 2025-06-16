@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robotic Co. Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">Robotic Co.</div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="products.html">All Products</a></li>
+
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="tools.html" class="btn tools">Tools</a></li>
+          <li><a href="login.html" class="btn login">Login</a></li>
+          <li><a href="signup.html" class="btn signup">Sign Up</a></li>
+        </ul>
+        <div class="user-container">
+          <!-- Changed from nested header -->
+          <div id="user-info">Welcome <span id="user-name"></span>!</div>
+          <button id="logout-button">Logout</button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Welcome to Robotic Co.</h1>
+      <p>Your one-stop shop for cutting-edge robotics solutions</p>
+      <a href="products.html" class="cta-btn">Explore Products</a>
+    </section>
+
+    <section id="about" class="info-section about-us-section">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>
+            At <strong>Robotic Co.</strong>, we are pioneers in intelligent
+            automation and robotics solutions. Our mission is to make smart
+            machines accessible to everyone — from industries to educational
+            institutions and hobbyists.
+          </p>
+          <p>
+            Founded by a team of engineers and innovators, we design robots that
+            are affordable, efficient, and customizable. Whether it’s for
+            delivery, learning, or manufacturing — our products are built to
+            empower the future.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="images/About-us.jpg" alt="Our Team" />
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="info-section blog-section">
+      <h2>Latest Blogs</h2>
+      <div class="blog-grid">
+        <div class="blog-card">
+          <img src="images/blog1.jpg" alt="Blog 1" />
+          <h3>5 Ways Robots Are Changing the World</h3>
+          <p>
+            Discover how automation and robotics are shaping industries,
+            healthcare, and even daily life.
+          </p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="blog-card">
+          <img src="images/blog2.jpeg" alt="Blog 2" />
+          <h3>Inside a Robot: Key Components Explained</h3>
+          <p>
+            Curious about what makes a robot tick? We break down sensors,
+            controllers, and mobility systems.
+          </p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="blog-card">
+          <img src="images/blog3.jpeg" alt="Blog 3" />
+          <h3>Top 3 DIY Robotics Projects for Beginners</h3>
+          <p>
+            Start building robots at home with these beginner-friendly projects
+            using Arduino and Raspberry Pi.
+          </p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="info-section services-section">
+      <h2>Our Services</h2>
+      <div class="services-container">
+        <div class="services-grid">
+          <div class="service-card">
+            <img src="images/service1.jpg" alt="Custom Robot Design" />
+            <h3>Custom Robot Design</h3>
+            <p>
+              We build tailored robots for industries, research, and education
+              with full design-to-deployment support.
+            </p>
+          </div>
+          <div class="service-card">
+            <img src="images/service2.jpeg" alt="Hardware Integration" />
+            <h3>Hardware Integration</h3>
+            <p>
+              Seamless integration of sensors, actuators, and controllers into
+              scalable robotics platforms.
+            </p>
+          </div>
+          <div class="service-card">
+            <img src="images/service3.jpeg" alt="AI & Automation Software" />
+            <h3>AI & Automation Software</h3>
+            <p>
+              We develop AI-powered software systems for autonomous control,
+              navigation, and data analysis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="contact">
+      <p>Connect with us: xxxxxx xxxxxx</p>
+      <div class="social-buttons">
+        <a
+          href="mailto:support@Roboticco.com"
+          target="_blank"
+          class="social-btn email"
+          title="Email"
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a
+          href="https://linkedin.com/company/Roboticco"
+          target="_blank"
+          class="social-btn linkedin"
+          title="LinkedIn"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a
+          href="https://github.com/Roboticco"
+          target="_blank"
+          class="social-btn github"
+          title="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://instagram.com/Roboticco"
+          target="_blank"
+          class="social-btn insta"
+          title="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2025 Robotic Co. All rights reserved.</p>
+    </footer>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tools - Robotix Co.</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header
+      style="
+        background-color: #000000;
+        color: white;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      "
+    >
+      <div style="font-size: 24px; font-weight: bold">Robotix Co.</div>
+      <nav>
+        <a
+          href="index.html"
+          style="color: white; text-decoration: none; margin-left: 20px"
+          >Home</a
+        >
+        <a
+          href="products.html"
+          style="color: white; text-decoration: none; margin-left: 20px"
+          >Products</a
+        >
+        <a
+          href="#contact"
+          style="color: white; text-decoration: none; margin-left: 20px"
+          >Contact</a
+        >
+      </nav>
+    </header>
+
+    <section class="tools-section" style="padding: 40px; text-align: center">
+      <h2 style="font-size: 28px; margin-bottom: 10px">Use the Tools</h2>
+      <p style="font-size: 18px; max-width: 800px; margin: 0 auto 30px">
+        This interface allows you to control your robot remotely using a
+        web-based control panel. You can navigate the robot, activate its
+        camera, and monitor live feed—all from your browser.
+      </p>
+
+      <div style="text-align: left; max-width: 800px; margin: 0 auto 30px">
+        <h3 style="font-size: 22px; margin-bottom: 10px">Features:</h3>
+        <ul style="font-size: 16px; line-height: 1.6">
+          <li>
+            <strong>Remote Control:</strong> Move the robot in all directions
+            using simple button commands.
+          </li>
+          <li>
+            <strong>Live Camera Feed:</strong> Stream real-time video from the
+            robot’s camera directly in your browser.
+          </li>
+          <li>
+            <strong>Secure Access:</strong> Camera access is protected by login
+            credentials to ensure authorized use only.
+          </li>
+          <li>
+            <strong>Responsive Interface:</strong> Optimized layout for both
+            desktop and mobile devices.
+          </li>
+          <li>
+            <strong>Interactive Feedback:</strong> Get real-time updates of the
+            robot's position and system status.
+          </li>
+        </ul>
+      </div>
+
+      <iframe
+        src="https://remote-control-app-b072.onrender.com/"
+        width="100%"
+        height="600"
+        frameborder="0"
+        allowfullscreen
+        title="Robot Control Interface"
+        style="border: 1px solid #ccc"
+      ></iframe>
+    </section>
+
+    <footer id="contact" class="contact">
+      <p>Connect with us: xxxxxx xxxxxx</p>
+      <div class="social-buttons">
+        <a
+          href="mailto:support@Roboticco.com"
+          target="_blank"
+          class="social-btn email"
+          title="Email"
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a
+          href="https://linkedin.com/company/Roboticco"
+          target="_blank"
+          class="social-btn linkedin"
+          title="LinkedIn"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a
+          href="https://github.com/Roboticco"
+          target="_blank"
+          class="social-btn github"
+          title="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://instagram.com/Roboticco"
+          target="_blank"
+          class="social-btn insta"
+          title="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2025 Robotic Co. All rights reserved.</p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const protectedPath = window.location.pathname.includes("tools.html");
+        const token = localStorage.getItem("token");
+        if (protectedPath && !token) {
+          alert("Please login to access the Tools section.");
+          window.location.href = "login.html";
+        }
+      });
+    </script>
+  </body>
+</html>
